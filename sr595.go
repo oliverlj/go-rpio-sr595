@@ -21,6 +21,7 @@ func Setup(clockPin, dataPin, latchPin rpio.Pin, numberOfPins int) {
 	clockPin.Output()
 	latchPin.Output()
 	numOfRegisterPins = numberOfPins
+	pins = make([]rpio.State, numOfRegisterPins)
 }
 
 func Reset() {
