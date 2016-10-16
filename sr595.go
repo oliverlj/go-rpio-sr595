@@ -25,7 +25,7 @@ func Setup(clockPin, dataPin, latchPin rpio.Pin, numberOfPins int) {
 
 func Reset() {
 	clearRegisters()
-	writeRegisters()
+	WriteRegisters()
 }
 
 func clearRegisters() {
@@ -34,7 +34,7 @@ func clearRegisters() {
 	}
 }
 
-func writeRegisters() {
+func WriteRegisters() {
 	latchPin.Low()
 	time.Sleep(time.Microsecond)
 	for i := numOfRegisterPins - 1; i >= 0; i-- {
